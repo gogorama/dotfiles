@@ -1,8 +1,14 @@
-#!/usr/bin/env bash
+#!/bin zsh
+
+
+name=
 
 # Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
-echo "Preparing to run..."
+
+echo "What do you want your computer to be named?"
+
+read $name
 
 # Ask for the administrator password upfront
 sudo -v
@@ -10,17 +16,11 @@ sudo -v
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-
-###############################################################################
-# General System                                                              #
-echo "1/7; Processing General System Settings"                                
-###############################################################################
-
 	# Set computer name (as done via System Preferences → Sharing)
-	sudo scutil --set ComputerName "joesmacpro"
-	sudo scutil --set HostName "joesmacpro"
-	sudo scutil --set LocalHostName "joesmacpro"
-	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "joesmacpro"
+	sudo scutil --set ComputerName "$name"
+	sudo scutil --set HostName "$name"
+	sudo scutil --set LocalHostName "$name"
+	sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$name"
 
 	# Set highlight color to green
 	defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"

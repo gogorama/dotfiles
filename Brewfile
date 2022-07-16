@@ -1,14 +1,19 @@
+tap "buo/cask-upgrade"
+tap "gogorama/95-chromium"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "gogorama/homebrew-95-chromium"
 
-
+######################################################################
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Google Drive CLI Client
 brew "gdrive"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Directory/file & DNS busting tool written in Go
@@ -29,29 +34,31 @@ brew "neofetch"
 brew "nmap"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
-# User interface to the TELNET protocol
-brew "telnet"
+# Simplified and community-driven man pages
+brew "tldr"
 # Internet file retriever
 brew "wget"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Additional completion definitions for zsh
 brew "zsh-completions"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
 
+######################################################################
 # Application uninstaller
 cask "appcleaner"
 # GUI app for Homebrew
 cask "cakebrew"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
-# Chromium v95 cask
-cask "gogorama-chromium"
 # App for testing HTTP/REST endpoints
 cask "cocoarestclient"
 # Voice and text chat software
 cask "discord"
 # Web browser
 cask "firefox"
+cask "gogorama-chromium"
 # Tools to protect your files
 cask "gpg-suite-no-mail"
 # Open-source video transcoder
@@ -66,14 +73,21 @@ cask "losslesscut"
 cask "lulu"
 # Controls and monitors all fans on Apple computers
 cask "macs-fan-control"
-# Verify system files structure, run miscellaneous maintenance and more
-cask "onyx"
 # Finder Toolbar app to open the current directory in Terminal
 cask "openinterminal-lite"
 # File system integration
 cask "osxfuse"
+# Free and open source web app scanner
+cask "owasp-zap"
 # Peer to peer Bitorrent client
 cask "qbittorrent"
+# QuickLook plug-in that renders source code with syntax highlighting
+cask "qlcolorcode"
+# QuickLook plugins
+cask "qlmarkdown"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "quicklook-json"
 # Video editor
 cask "shotcut"
 # Music streaming service
@@ -82,7 +96,11 @@ cask "spotify"
 cask "sublime-text"
 # Virtualizer for x86 hardware
 cask "virtualbox"
+# Multimedia player
+cask "vlc"
+cask "webpquicklook"
 
+######################################################################
 mas "Bitwarden", id: 1352778147
 mas "Fastest VPN", id: 1480208488
 mas "Foscam VMS", id: 1521202507

@@ -2,6 +2,9 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "gogorama/homebrew-95-chromium"
+
+
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Google Drive CLI Client
@@ -34,12 +37,15 @@ brew "wget"
 brew "youtube-dl"
 # Additional completion definitions for zsh
 brew "zsh-completions"
+
 # Application uninstaller
 cask "appcleaner"
 # GUI app for Homebrew
 cask "cakebrew"
 # Automated testing of webapps for Google Chrome
 cask "chromedriver"
+# Chromium v95 cask
+cask "gogorama-chromium"
 # App for testing HTTP/REST endpoints
 cask "cocoarestclient"
 # Voice and text chat software
@@ -76,6 +82,7 @@ cask "spotify"
 cask "sublime-text"
 # Virtualizer for x86 hardware
 cask "virtualbox"
+
 mas "Bitwarden", id: 1352778147
 mas "Fastest VPN", id: 1480208488
 mas "Foscam VMS", id: 1521202507
